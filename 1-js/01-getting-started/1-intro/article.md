@@ -1,83 +1,84 @@
-# An Introduction to JavaScript
+# Uma introdução a JavaScript
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Vejamos o que há de tão especial sobre JavaScript, o que é possível de se fazer com a linguagem, bem como outras tecnologias com ela compatíveis.
 
-## What is JavaScript?
+## O que é JavaScript?
 
-*JavaScript* was initially created to *"make web pages alive"*.
+*JavaScript* foi criada para *"trazer vida às páginas web"*.
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Os programas nessa linguagem são chamados de *scripts*. Eles podem ser inseridos diretamente no HTML de uma página web e são executados automaticamente quando a mesma é carregada.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Os scripts são carregados e executados como texto puro. Não há qualquer preparação ou compilação feita para que sejam rodados.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+Nesse aspecto, JavaScript é bem diferente de uma outra linguagem, chamada [Java](https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)).
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Por que é chamada <u>Java</u>Script?"
+Quando foi criada, JavaScript tinha um outro nome: "LiveScript". Mas Java era uma linguagem muito popular na época, e decidiu-se que posicionar essa nova tecnologia como uma "irmã mais nova" de Java seria uma boa estratégia.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Com o seu desenvolvimento, JavaScript se tornou uma linguagem totalmente independente, com uma especificação própria denominada [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), não tendo atualmente nenhuma relação com Java.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Hoje em dia, JavaScript pode ser executada não somente em navegadores, mas também em servidores, ou mesmo em qualquer dispositivo que rode o [motor JavaScript](https://en.wikipedia.org/wiki/JavaScript_engine).
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Navegadores têm um interpretador embutido, às vezes chamado de "máquina virtual JavaScript".
 
-Different engines have different "codenames". For example:
+Interpretadores diferentes têm diferentes "codinomes". Por exemplo:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- no Chrome e no Opera.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- no Firefox.
+- ...Existem outros codinomes, como "Trident" e "Chakra", para versões diversas do IE, "ChakraCore" para o Microsoft Edge, "Nitro" e "SquirrelFish" para o Safari, etc.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+Lembre-se das expressões acima, pois elas são muito usadas em artigos de desenvolvedores na internet. Nós as usaremos também. Por exemplo, se "V8 oferece suporte ao recurso X", então esse recurso provavelmente funciona no Chrome e no Opera.
 
-```smart header="How do engines work?"
+```smart header="Como funcionam os motores?"
 
-Engines are complicated. But the basics are easy.
+Motores são complicados, mas seu funcionamento básico é simples.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. O motor (embutido se no navegador) lê ("analisa") o script;
+2. Então, converte ("compila") o script para linguagem de máquina;
+3. Finalmente, o código de máquina é executado, muito rapidamente.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+O motor otimiza o código a cada etapa do processo. Ele até mesmo monitora o script compilado em tempo de execução, analisa os dados que estão sendo processados, e otimiza o código de máquina, agora baseado nessas informações.
 ```
 
-## What can in-browser JavaScript do?
+## O que pode fazer o JavaScript do navegador?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+JavaScript moderno é uma linguagem de programação "segura". Ela não proporciona acesso de baixo nível à memória ou à CPU, pois foi criada inicialmente para navegadores, que não precisavam desses recursos.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+Os recursos de JavaScript dependem bastante do tipo de ambiente em que a linguagem está sendo executada. Por exemplo, [Node.js](https://pt.wikipedia.org/wiki/Node.js) dá suporte a funções que permitem ao JavaScript ler/escrever arquivos, fazer requisições de rede, etc.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+JavaScript no navegador faz qualquer coisa relacionada a manipulação de páginas web, interação com o usuário e com o servidor web.
 
-For instance, in-browser JavaScript is able to:
+Por exemplo, JavaScript no navegador pode:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- Adicionar elementos HTML à página, modificar conteúdo existente, alterar estilos;
+- Reaje a ações do usuário, cliques e movimentos do mouse, pressionar de teclas;
+- Envia requisições de rede para servidores remotos, faz o download e o upload de arquivos (as conhecidas tecnologias [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) e [COMET](https://en.wikipedia.org/wiki/Comet_(programming))).
+- Ativar ou desativar cookies, fazer perguntas ao visitante, exibir mensagens;
+- Persistir dados client-side ("armazenamento local").
 
-## What CAN'T in-browser JavaScript do?
+## O que JavaScript no navegador NÃO PODE fazer?
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+Os recursos de JavaScript no navegador são limitados em prol da segurança do usuário. O objetivo é prevenir páginas maliciosas de acessar informações privadas ou afetar os dados do usuário.
 
-Examples of such restrictions include:
+São exemplos dessas restrições:
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+- JavaScript em uma página we não consegue acessar arquivos arbitrários no disco rígido, tampouco alterá-los, copiá-los, ou executar programas. Não há acesso direto a funções do sistema operacional.
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+    Navegadores modernos permitem o trabalho com arquivos, mas o acesso a eles é limitado e somente permitido após uma ação do usuário, como "arrastar" para a janela do navegador um arquivo, ou acessá-lo por meio da tag `<input>`.
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+    Há meios de acesso a câmeras, microfones e outros dispositivos, mas que requerem permissão explícita do usuário. Uma página com JavaScript habilitado não tem como acessar sorrateiramente a câmera web, observar o ambiente e enviar as informações para a [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+- Abas/janelas diferentes normalmente não têm conhecimento umas sobre as outras, o que é possível, às vezes, quando uma janela usa JavaScript para abrir outra. Mesmo nesse caso, entretanto, o JavaScript de uma página não pode acessar outra, se ambas provêm de diferentes websites (de diferentes domínios, diferente protocolo ou acessadas por portas diferentes).
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    Essa é a chamada "Política de Mesma Origem". Para que ela não seja aplicada, *ambas páginas* devem concordar com a troca de dados e conter código JavaScript especial para lidar com isso. Essa técnica será abordada neste tutorial.
+
+    Essa limitação existe, de novo, para a segurança do usuário. Uma página de `http://sitequalquer.com` aberta pelo usuário não pode ser capaz de acessar outra aba, com a URL `http://gmail.com` e roubar informações a partir dali.
+- JavaScript pode se comunicar com o servidor de onde partiu a página atual com facilidade. Mas, é bastante limitada para receber dados a partir de outros sites/domínios. Ainda que possível, isso requer uma permissão expressa (contida em cabeçalhos HTTP) vinda do lado remoto. De novo, uma limitação de segurança.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+Esse limites não existem quando JavaScript é usada fora do ambiente do navegador, por exemplo, num servidor. Além disso, navegadores modernos permitem que plugins/extensões requeiram permissões extendidas.
 
 ## What makes JavaScript unique?
 
