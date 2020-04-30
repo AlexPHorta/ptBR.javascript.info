@@ -1,16 +1,16 @@
-# Code editors
+# Editores de Código
 
-A code editor is the place where programmers spend most of their time.
+O editor é o lugar onde programadores passam a maior parte do tempo.
 
-There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+Há dois tipos principais de editores de código: IDEs e editores. Muitas pessoas usam uma ferramenta de cada tipo.
 
 ## IDE
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a "whole project." As the name suggests, it's not just an editor, but a full-scale "development environment."
+O termo [IDE](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado) (Integrated Development Environment - Ambiente de Desenvolvimento Integrado) faz referência a editores poderosos, com muitos recursos, que normalmente operam sobre "um projeto inteiro". Como o nome sugere, não é apenas um editor, mas um "ambiente de desenvolvimento" por completo".
 
-An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like [git](https://git-scm.com/)), a testing environment, and other "project-level" stuff.
+Uma IDE carrega o projeto (que pode ser composto de muitos arquivos), possibilita a navegação entre os arquivos, provê autocomplemento baseado em todo o projeto (não somente no arquivo aberto), e integração com um sistema de gerenciamento de versão (como [git](https://git-scm.com/)), um ambiente de testes, e outros recursos "em nível de projeto".
 
-If you haven't selected an IDE yet, consider the following options:
+Se você ainda não escolheu uma IDE, considere as seguintes opções:
 
 - [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (cross-platform, paid).
